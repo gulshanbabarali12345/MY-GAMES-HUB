@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +9,17 @@
         h1 { color: #ff0055; margin-bottom: 5px; font-size: 26px; text-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
         .ad-container { background: #161622; padding: 12px; margin: 10px auto; max-width: 600px; border: 2px dashed #ff0055; border-radius: 8px; cursor: pointer; color: #ff0055; font-weight: bold; font-size: 14px; box-shadow: 0 0 10px rgba(255, 0, 85, 0.2); }
         .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 1000px; margin: 20px auto; padding: 0 10px; }
-        .game-card { background: #1a1a26; padding: 15px; border-radius: 12px; border: 1px solid #2a2a3a; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80px; }
+        .game-card { background: #1a1a26; padding: 15px; border-radius: 12px; border: 1px solid #2a2a3a; cursor: pointer; transition: transition 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
         .game-card:hover { transform: translateY(-3px); border-color: #ff0055; box-shadow: 0 5px 12px rgba(255, 0, 85, 0.3); }
         .game-card h3 { margin: 5px 0 0 0; color: #fff; font-size: 14px; }
         .game-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
-        .game-window { width: 92%; max-width: 450px; height: 380px; background: #111; border: 3px solid #ff0055; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: 10px; box-sizing: border-box; }
+        .game-window { width: 92%; max-width: 450px; height: 380px; background: #111; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: content; min-height: 250px; border: 2px solid #ff0055; position: relative; padding: 10px; margin-top: 15px; font-size: 14px; }
         .close-btn { background: #ff0055; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 15px; font-size: 14px; }
-        .btn-style { background: #ff0055; color: white; border: none; padding: 10px 20px; font-size: 15px; border-radius: 6px; cursor: pointer; margin: 5px; font-weight: bold; }
+        .btn-style { background: #ff0055; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin: 5px; font-weight: bold; }
         .grid-3x3 { display: grid; grid-template-columns: repeat(3, 75px); gap: 8px; margin-top: 10px; }
-        .cell { width: 75px; height: 75px; background: #1a1a26; border: 2px solid #ff0055; font-size: 26px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 6px; }
+        .cell { width: 75px; height: 75px; background: #1a1a26; border: 2px solid #ff0055; font-size: 26px; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
         .dpad { display: grid; grid-template-columns: repeat(3, 50px); gap: 5px; margin-top: 10px; }
-        .dbtn { width: 50px; height: 50px; background: #222; border: 2px solid #ff0055; color: white; font-weight: bold; font-size: 18px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .dbtn { width: 50px; height: 50px; grid-background: #222; border: 2px solid #ff0055; color: white; font-weight: bold; font-size: 18px; border-radius: 6px; cursor: pointer; pointer; }
     </style>
 </head>
 <body>
@@ -38,7 +37,7 @@
         <div class="game-card" onclick="playGame(5, '✊ Rock Paper Scissors')"><h3>✊ 5. Rock Paper</h3></div>
         <div class="game-card" onclick="playGame(6, '🃏 Memory Match')"><h3>🃏 6. Memory Match</h3></div>
         <div class="game-card" onclick="playGame(7, '🧮 Fast Math Quiz')"><h3>🧮 7. Fast Math Quiz</h3></div>
-        <div class="game-card" onclick="playGame(8, '🟡 Tap Click Circle')"><h3>🟡 8. Tap Circle</h3></div>
+        <div class="game-card" onclick="playGame(8, '🟡 Tap Circle Click')"><h3>🟡 8. Tap Circle</h3></div>
         <div class="game-card" onclick="playGame(9, '🎨 Color Guesser')"><h3>🎨 9. Color Guesser</h3></div>
         <div class="game-card" onclick="playGame(10, '🪙 Coin Flipper')"><h3>🪙 10. Coin Flipper</h3></div>
         <div class="game-card" onclick="playGame(11, '🧱 Brick Breaker')"><h3>🧱 11. Brick Breaker</h3></div>
@@ -50,14 +49,14 @@
         <div class="game-card" onclick="playGame(17, '🎈 Balloon Popper')"><h3>🎈 17. Balloon Popper</h3></div>
         <div class="game-card" onclick="playGame(18, '⭐ Star Catcher')"><h3>⭐ 18. Star Catcher</h3></div>
         <div class="game-card" onclick="playGame(19, '🐝 Bee Dodger')"><h3>🐝 19. Bee Dodger</h3></div>
-        <div class="game-card" onclick="playGame(20, '🕳️ Whack A Mole')"><h3>🕳️ 20. Whack A Mole</h3></div>
+        <div class="game-card" onclick="playGame(20, '🕳 Whack A Mole')"><h3>🕳 20. Whack A Mole</h3></div>
         <div class="game-card" onclick="playGame(21, '🐸 Frog Hopper')"><h3>🐸 21. Frog Hopper</h3></div>
         <div class="game-card" onclick="playGame(22, '🥚 Catch the Egg')"><h3>🥚 22. Catch the Egg</h3></div>
-        <div class="game-card" onclick="playGame(23, '🍭 Candy Matcher')"><h3>🍭 23. Candy Match</h3></div>
+        <div class="game-card" onclick="playGame(23, '🍭 Candy Match')"><h3>🍭 23. Candy Match</h3></div>
         <div class="game-card" onclick="playGame(24, '💎 Diamond Miner')"><h3>💎 24. Diamond Mine</h3></div>
         <div class="game-card" onclick="playGame(25, '🍔 Burger Maker')"><h3>🍔 25. Burger Maker</h3></div>
-        <div class="game-card" onclick="playGame(26, '🛸 Alien Invaders')"><h3>🛸 26. Alien Invader</h3></div>
-        <div class="game-card" onclick="playGame(27, '🐠 Fish Swimmer')"><h3>🐠 27. Fish Swim</h3></div>
+        <div class="game-card" onclick="playGame(26, '🛸 Alien Invader')"><h3>🛸 26. Alien Invader</h3></div>
+        <div class="game-card" onclick="playGame(27, '🐠 Fish Swim')"><h3>🐠 27. Fish Swim</h3></div>
         <div class="game-card" onclick="playGame(28, '🦖 Dino Run Offline')"><h3>🦖 28. Dino Run</h3></div>
     </div>
 
@@ -68,11 +67,14 @@
         <button class="close-btn" onclick="closeGame()">❌ Close Game</button>
     </div>
 
+    <!-- Adsterra Popunder Script (Sahi jagah set kiya hua hai) -->
+    <script src="https://effectivecpmnetwork.com"></script>
+
     <script>
         const playerOverlay = document.getElementById('gamePlayer');
         const container = document.getElementById('canvas-container');
         const mySmartlink = 'https://effectivecpmnetwork.com';
-        let currentScore = 0; let gameInterval; let activeGameId = 0;
+        let currentScore = 0, let gameInterval, let activeGameId = 0;
 
         function openAd() { window.open(mySmartlink, '_blank'); }
         function closeGame() { playerOverlay.style.display = 'none'; container.innerHTML = ''; clearInterval(gameInterval); openAd(); }
@@ -85,28 +87,27 @@
             if(Math.random() < 0.6) openAd();
 
             if (id === 1) {
-                container.innerHTML = `<h3>${name}</h3><canvas id="sCanvas" width="240" height="180" style="background:#000; border:2px solid #ff0055;"></canvas><p style="margin:5px 0;">Score: <span id="sLabel">0</span></p><div class="dpad"><div></div><button class="dbtn" onclick="setSnakeDir(0,-20)">▲</button><div></div><button class="dbtn" onclick="setSnakeDir(-20,0)">◀</button><button class="dbtn" onclick="openAd()">💰</button><button class="dbtn" onclick="setSnakeDir(20,0)">▶</button><div></div><button class="dbtn" onclick="setSnakeDir(0,20)">▼</button><div></div></div>`;
+                container.innerHTML = `<h3>${name}</h3><canvas id="canvas" width="240" height="180" style="background:#000; border:2px solid #ff0055;"></canvas><p style="margin:5px 0;">Score: <span id="slabel">0</span></p><div class="dpad"><div></div><button class="dbtn" onclick="setSnakeDir(0,-20)">▲</button><div></div><button class="dbtn" onclick="setSnakeDir(-20,0)">◀</button><div></div><button class="dbtn" onclick="setSnakeDir(20,0)">▶</button><div></div><button class="dbtn" onclick="setSnakeDir(0,20)">▼</button><div></div></div>`;
                 startMobileSnake();
             } else if (id === 3) {
                 window.ttt = ['','','','','','','','','']; window.p = 'X';
                 container.innerHTML = `<h3>${name}</h3><div class="grid-3x3">${[0,1,2,3,4,5,6,7,8].map(i => `<div class="cell" id="c-${i}" onclick="playTTT(${i})"></div>`).join('')}</div>`;
             } else if (id === 5) {
-                container.innerHTML = `<h3>${name}</h3><p id="rpsRes">Choose your move:</p><button class="btn-style" onclick="playRPS('✊')">✊ Rock</button><button class="btn-style" onclick="playRPS('✋')">✋ Paper</button><button class="btn-style" onclick="playRPS('✌️')">✌️ Scissors</button><p id="rpsScore" style="color:#00ffaa;">Wins: 0</p>`;
+                container.innerHTML = `<h3>${name}</h3><p id="rpsRet">Choose your move:</p><button class="btn-style" onclick="playRPS('✊')">✊ Rock</button><button class="btn-style" onclick="playRPS('✋')">✋ Paper</button><button class="btn-style" onclick="playRPS('✌')">✌ Scissors</button><p id="rpsScore" style="color:#00ffaa;">Wins: 0</p>`;
             } else if (id === 7) {
                 generateMathQuiz();
-            } else if ([2, 8, 11, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25].includes(id)) {
-                container.innerHTML = `<div style='text-align:center;'><h2>${name}</h2><h3 id="clickLbl" style="color:#00ffaa;">Score: 0</h3><button class="btn-style" style="padding:20px 40px; font-size:18px;" onclick="addPoint()">🔥 TAP / SMASH! 🔥</button></div>`;
+            } else if ([2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28].includes(id)) {
+                container.innerHTML = `<div style="text-align:center;"><h2>${name}</h2><h3 id="clickLbl" style="color:#00ffaa;">Score: 0</h3><button class="btn-style" style="padding:20px 40px; font-size:18px;" onclick="addPoint()">TAP TO PLAY / ACTION</button></div>`;
             } else {
                 let secret = Math.floor(Math.random() * 10) + 1;
-                container.innerHTML = `<div style='padding:10px;'><h3>${name}</h3><p>Guess the lucky number (1-10):</p><input type='number' id='pIn' style='padding:8px; width:60px; font-size:16px; text-align:center; border-radius:5px;'><br><br><button class="btn-style" onclick="checkLuck(${secret})">Submit Luck</button></div>`;
+                container.innerHTML = `<div><h3>${name}</h3><p>Guess the lucky number (1-10):</p><input type="number" id="pin" style="padding:8px; width:60px; font-size:16px; text-align:center; border-radius:4px;"><button class="btn-style" onclick="checkLuck(${secret})">Submit Luck</button></div>`;
             }
         }
 
-        window.addPoint = function() {
-            currentScore++; document.getElementById('clickLbl').innerText = "Score: " + currentScore;
+        function addPoint() {
+            currentScore++; document.getElementById('clickLbl').innerText = 'Score: ' + currentScore;
             if (currentScore % 12 === 0) { openAd(); }
         }
 
-        window.playTTT = function(i) {
+        function playTTT(i) {
             if(window.ttt[i] === '') {
-                window.ttt[i] = window.p; document.getElementById(`c-${i}`).innerText = window.p;

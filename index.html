@@ -1,62 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎮 Zadii Mega Arcade | Play 28 Instant Games 🎮</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎮 Zadii Mega Arcade | Play 28 Instant Games</title>
+    <!-- ⚡ ADSTERRA POPUNDER SCRIPT ⚡ -->
+    <script src="https://effectivecpmnetwork.com"></script>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #0d0d13; color: white; margin: 0; padding: 15px; text-align: center; user-select: none; }
-        h1 { color: #ff0055; margin-bottom: 5px; font-size: 26px; text-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
-        .ad-container { background: #161622; padding: 12px; margin: 10px auto; max-width: 600px; border: 2px dashed #ff0055; border-radius: 8px; cursor: pointer; color: #ff0055; font-weight: bold; font-size: 14px; box-shadow: 0 0 10px rgba(255, 0, 85, 0.2); }
-        .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 1000px; margin: 20px auto; padding: 0 10px; }
-        .game-card { background: #1a1a26; padding: 15px; border-radius: 12px; border: 1px solid #2a2a3a; cursor: pointer; transition: transition 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
-        .game-card:hover { transform: translateY(-3px); border-color: #ff0055; box-shadow: 0 5px 12px rgba(255, 0, 85, 0.3); }
+        body { font-family: Arial, sans-serif; background: #0d0d1a; color: #fff; margin: 0; padding: 0; text-align: center; }
+        h1 { color: #ff0055; margin-top: 20px; font-size: 26px; text-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
+        .ad-container { background: #161622; padding: 12px; margin: 10px auto; max-width: 400px; border-radius: 8px; border: 2px dashed #ff0055; cursor: pointer; }
+        .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; max-width: 600px; margin: 0 auto; padding: 15px; }
+        .game-card { background: #1a1a2d; padding: 15px; border-radius: 12px; border: 1px solid #2a2a3a; cursor: pointer; transition: 0.3s; }
+        .game-card:hover { transform: translateY(-3px); border-color: #ff0055; }
         .game-card h3 { margin: 5px 0 0 0; color: #fff; font-size: 14px; }
-        .game-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
-        .game-window { width: 92%; max-width: 450px; height: 380px; background: #111; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: content; min-height: 250px; border: 2px solid #ff0055; position: relative; padding: 10px; margin-top: 15px; font-size: 14px; }
-        .close-btn { background: #ff0055; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 15px; font-size: 14px; }
-        .btn-style { background: #ff0055; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin: 5px; font-weight: bold; }
-        .grid-3x3 { display: grid; grid-template-columns: repeat(3, 75px); gap: 8px; margin-top: 10px; }
-        .cell { width: 75px; height: 75px; background: #1a1a26; border: 2px solid #ff0055; font-size: 26px; font-weight: bold; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
-        .dpad { display: grid; grid-template-columns: repeat(3, 50px); gap: 5px; margin-top: 10px; }
-        .dbtn { width: 50px; height: 50px; grid-background: #222; border: 2px solid #ff0055; color: white; font-weight: bold; font-size: 18px; border-radius: 6px; cursor: pointer; pointer; }
+        .game-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; flex-direction: column; }
+        .game-window { width: 92%; max-width: 450px; height: 380px; background: #111; border-radius: 12px; overflow: hidden; position: relative; border: 2px solid #ff0055; }
+        .close-btn { background: #ff0055; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; font-size: 14px; }
+        .dpad-container { display: grid; grid-template-columns: repeat(3, 50px); gap: 8px; margin-top: 10px; justify-content: center; }
+        .btn-style { background: #ff0055; color: white; border: none; font-weight: bold; border-radius: 6px; cursor: pointer; width: 50px; height: 50px; font-size: 18px; }
+        .grid-3x3 { display: grid; grid-template-columns: repeat(3, 75px); gap: 8px; margin-top: 10px; justify-content: center; }
+        .cell-btn { width: 75px; height: 75px; background: #222; border: 2px solid #ff0055; color: white; font-size: 24px; font-weight: bold; border-radius: 8px; cursor: pointer; }
     </style>
 </head>
 <body>
-
     <h1>⚡ ZADII MEGA ARCADE ⚡</h1>
-    <p style="color:#aaa; font-size: 13px; margin-top:0;">Play 28 instant HTML5 mini-games & beat your high scores!</p>
-
-    <div class="ad-container" onclick="openAd()">🎁 CLICK HERE TO UNLOCK GOLDEN SKINS & FREE COINS! 🎁</div>
-
-    <div class="games-grid">
-        <div class="game-card" onclick="playGame(1, '🐍 Classic Snake')"><h3>🐍 1. Classic Snake</h3></div>
-        <div class="game-card" onclick="playGame(2, '💰 Gold Clicker')"><h3>💰 2. Gold Clicker</h3></div>
-        <div class="game-card" onclick="playGame(3, '❌ Tic-Tac-Toe')"><h3>❌ 3. Tic-Tac-Toe</h3></div>
-        <div class="game-card" onclick="playGame(4, '🔮 Number Guesser')"><h3>🔮 4. Number Guesser</h3></div>
-        <div class="game-card" onclick="playGame(5, '✊ Rock Paper Scissors')"><h3>✊ 5. Rock Paper</h3></div>
-        <div class="game-card" onclick="playGame(6, '🃏 Memory Match')"><h3>🃏 6. Memory Match</h3></div>
-        <div class="game-card" onclick="playGame(7, '🧮 Fast Math Quiz')"><h3>🧮 7. Fast Math Quiz</h3></div>
-        <div class="game-card" onclick="playGame(8, '🟡 Tap Circle Click')"><h3>🟡 8. Tap Circle</h3></div>
-        <div class="game-card" onclick="playGame(9, '🎨 Color Guesser')"><h3>🎨 9. Color Guesser</h3></div>
-        <div class="game-card" onclick="playGame(10, '🪙 Coin Flipper')"><h3>🪙 10. Coin Flipper</h3></div>
-        <div class="game-card" onclick="playGame(11, '🧱 Brick Breaker')"><h3>🧱 11. Brick Breaker</h3></div>
-        <div class="game-card" onclick="playGame(12, '🎲 Dice Roller')"><h3>🎲 12. Dice Roller</h3></div>
-        <div class="game-card" onclick="playGame(13, '🚀 Space Avoid')"><h3>🚀 13. Space Avoid</h3></div>
-        <div class="game-card" onclick="playGame(14, '🏃 Block Jumper')"><h3>🏃 14. Block Jumper</h3></div>
-        <div class="game-card" onclick="playGame(15, '📦 Box Stacker')"><h3>📦 15. Box Stacker</h3></div>
-        <div class="game-card" onclick="playGame(16, '🍉 Fruit Tap Slasher')"><h3>🍉 16. Fruit Tap</h3></div>
-        <div class="game-card" onclick="playGame(17, '🎈 Balloon Popper')"><h3>🎈 17. Balloon Popper</h3></div>
-        <div class="game-card" onclick="playGame(18, '⭐ Star Catcher')"><h3>⭐ 18. Star Catcher</h3></div>
-        <div class="game-card" onclick="playGame(19, '🐝 Bee Dodger')"><h3>🐝 19. Bee Dodger</h3></div>
-        <div class="game-card" onclick="playGame(20, '🕳 Whack A Mole')"><h3>🕳 20. Whack A Mole</h3></div>
-        <div class="game-card" onclick="playGame(21, '🐸 Frog Hopper')"><h3>🐸 21. Frog Hopper</h3></div>
-        <div class="game-card" onclick="playGame(22, '🥚 Catch the Egg')"><h3>🥚 22. Catch the Egg</h3></div>
-        <div class="game-card" onclick="playGame(23, '🍭 Candy Match')"><h3>🍭 23. Candy Match</h3></div>
-        <div class="game-card" onclick="playGame(24, '💎 Diamond Miner')"><h3>💎 24. Diamond Mine</h3></div>
-        <div class="game-card" onclick="playGame(25, '🍔 Burger Maker')"><h3>🍔 25. Burger Maker</h3></div>
-        <div class="game-card" onclick="playGame(26, '🛸 Alien Invader')"><h3>🛸 26. Alien Invader</h3></div>
-        <div class="game-card" onclick="playGame(27, '🐠 Fish Swim')"><h3>🐠 27. Fish Swim</h3></div>
-        <div class="game-card" onclick="playGame(28, '🦖 Dino Run Offline')"><h3>🦖 28. Dino Run</h3></div>
+    <p style="color:#aaa; font-size:13px; margin-top:0;">Play 28 instant HTML5 mini-games & beat your high scores!</p>
+    <!-- 🎁 SMARTLINK BANNER -->
+    <div class="ad-container" onclick="location.href='https://effectivecpmnetwork.com'">
+        <span style="color: gold; font-weight: bold;">🎁 CLICK HERE TO UNLOCK GOLDEN SKINS & FREE COINS! 🎁</span>
     </div>
+    <!-- Games Grid -->
+    <div class="games-grid">
+        <div class="game-card" onclick="openGame(1)"><h3>🐍 1. Classic Snake</h3></div>
+        <div class="game-card" onclick="openGame(2)"><h3>💰 2. Gold Clicker</h3></div>
+        <div class="game-card" onclick="openGame(3)"><h3>❌ 3. Tic-Tac-Toe</h3></div>
+        <div class="game-card" onclick="openGame(4)"><h3>🔮 4. Number Guesser</h3></div>
+        <div class="game-card" onclick="openGame(5)"><h3>✊ 5. Rock Paper Scissors</h3></div>
+        <div class="game-card" onclick="openGame(6)"><h3>🃏 6. Memory Match</h3></div>
+        <div class="game-card" onclick="openGame(7)"><h3>🧮 7. Fast Math Quiz</h3></div>
+        <div class="game-card" onclick="openGame(8)"><h3>🟡 8. Tap Circle Click</h3></div>
+        <div class="game-card" onclick="openGame(9)"><h3>🎨 9. Color Guesser</h3></div>
+        <div class="game-card" onclick="openGame(10)"><h3>🪙 10. Coin Flipper</h3></div>
+        <div class="game-card" onclick="openGame(11)"><h3>🧱 11. Brick Breaker</h3></div>
+        <div class="game-card" onclick="openGame(12)"><h3>🎲 12. Dice Roller</h3></div>
+        <div class="game-card" onclick="openGame(13)"><h3>🚀 13. Space Avoid</h3></div>
+        <div class="game-card" onclick="openGame(14)"><h3>🏃 14. Block Jumper</h3></div>
+        <div class="game-card" onclick="openGame(15)"><h3>📦 15. Box Stacker</h3></div>
+        <div class="game-card" onclick="openGame(16)"><h3>🍉 16. Fruit Tap Slasher</h3></div>
+        <div class="game-card" onclick="openGame(17)"><h3>🎈 17. Balloon Popper</h3></div>
+        <div class="game-card" onclick="openGame(18)"><h3>⭐ 18. Star Catcher</h3></div>
+        <div class="game-card" onclick="openGame(19)"><h3>🐝 19. Bee Dodger</h3></div>
+        <div class="game-card" onclick="openGame(20)"><h3>🕳 20. Whack A Mole</h3></div>
+        <div class="game-card" onclick="openGame(21)"><h3>🐸 21. Frog Hopper</h3></div>
+        <div class="game-card" onclick="openGame(22)"><h3>🥚 22. Catch the Egg</h3></div>
+        <div class="game-card" onclick="openGame(23)"><h3>🍭 23. Candy Match</h3></div>
+        <div class="game-card" onclick="openGame(24)"><h3>💎 24. Diamond Miner</h3></div>
+        <div class="game-card" onclick="openGame(25)"><h3>🍔 25. Burger Maker</h3></div>
+        <div class="game-card" onclick="openGame(26)"><h3>🛸 26. Alien Invader</h3></div>
+        <div class="game-card" onclick="openGame(27)"><h3>🐠 27. Fish Swim</h3></div>
+        <div class="game-card" onclick="openGame(28)"><h3>🦖 28. Dino Run Offline</h3></div>
+    </div>
+    <!-- Popup Window -->
+    <div id="gameOverlay" class="game-overlay">
+        <div class="game-window">
+            <h2 id="modalTitle" style="color: #ff0055; margin-top: 15px; font-size: 20px;">Game</h2>
+            <div id="screenContainer" style="min-height: 240px; display: flex; justify-content: center; align-items: center; color: white;"></div>
+            <button class="close-btn" onclick="closeGame()">Close Game ✕</button>
+        </div>
+    </div>
+<script>
+const gamesLibrary = {
+    1: {
+        title: "🐍 1. Classic Snake",
+        init: function(container) {
+            container.innerHTML = `<div style="text-align:center; width:100%;"><canvas id="snakeCanvas" width="200" height="200" style="background:#000; border:2px solid #ff0055; display:block; margin:0 auto;"></canvas><div class="dpad-container"><div></div><button class="btn-style" onclick="window.setSnakeDir('UP')">▲</button><div></div><button class="btn-style" onclick="window.setSnakeDir('LEFT')">◀</button><div></div><button class="btn-style" onclick="window.setSnakeDir('RIGHT')">▶</button><div></div><button class="btn-style" onclick="window.setSnakeDir('DOWN')">▼</button><div></div></div></div>`;
+            const canvas = document.getElementById("snakeCanvas"); const ctx = canvas.getContext("2d");
+            let box = 20, snake = [{x:100, y:100}], d = "RIGHT";
+            let food = {x: Math.floor(Math.random()*10)*box, y: Math.floor(Math.random()*10)*box}; let score = 0;
+            window.setSnakeDir = function(dir) {
+                if(dir === "LEFT" && d !== "RIGHT") d = "LEFT"; if(dir === "UP" && d !== "DOWN") d = "UP";
+                if(dir === "RIGHT" && d !== "LEFT") d = "RIGHT"; if(dir === "DOWN" && d !== "UP") d = "DOWN";
+            };
+            function draw() {
+                ctx.fillStyle = "#000"; ctx.fillRect(0,0,200,200);
+                for(let i=0; i<snake.length; i++) { ctx.fillStyle = (i===0) ? "#ff0055" : "#fff"; ctx.fillRect(snake[i].x, snake[i].y, box, box); }
+                ctx.fillStyle = "gold"; ctx.fillRect(food.x, food.y, box, box);
+                let sX = snake[0].x, sY = snake[0].y;
+                if(d === "LEFT") sX -= box; if(d === "UP") sY -= box; if(d === "RIGHT") sX += box; if(d === "DOWN") sY += box;
+                if(sX === food.x && sY === food.y) { score++; food = {x: Math.floor(Math.random()*10)*box, y: Math.floor(Math.random()*10)*box}; } else { snake.pop(); }
+                let head = {x:sX, y:sY};
+                if(sX<0 || sY<0 || sX>=200 || sY>=200) { clearInterval(loop); alert("Game Over! Score: " + score); return; }
+                snake.unshift(head);
+            }
+            let loop = setInterval(draw, 300); window.activeGameInterval = loop;
+        }
+    },
+    2: {
+        title: "💰 2. Gold Clicker",
+        init: function(container) {
+            let pts = 0;
+            container.innerHTML = `<div style="padding:10px;"><h3 style="color:gold; font-size:24px; margin:5px;" id="cVal">0</h3><button onclick="window.addClick()" style="width:100px; height:100px; border-radius:50%; background:gold; border:none; font-size:35px; cursor:pointer; box-shadow:0 0 15px gold;">🪙</button></div>`;
+            window.addClick = function() { pts++; document.getElementById("cVal").innerText = pts; };
+        }
+    },
+    3: {
+        title: "❌ 3. Tic-Tac-Toe",
+        init: function(container) {
+            container.innerHTML = `<div><div id="tttTurn" style="color:cyan; margin-bottom:10px; font-weight:bold;">Player X's Turn</div><div class="grid-3x3"><button class="cell-btn" onclick="window.playTTT(this,0)"></button><button class="cell-btn" onclick="window.playTTT(this,1)"></button><button class="cell-btn" onclick="window.playTTT(this,2)"></button><button class="cell-btn" onclick="window.playTTT(this,3)"></button><button class="cell-btn" onclick="window.playTTT(this,4)"></button><button class="cell-btn" onclick="window.playTTT(this,5)"></button><button class="cell-btn" onclick="window.playTTT(this,6)"></button><button class="cell-btn" onclick="window.playTTT(this,7)"></button><button class="cell-btn" onclick="window.playTTT(this,8)"></button></div></div>`;
+            let turn = "X", active = true, grid = ["","","","","","","","",""];
+            window.playTTT = function(btn, idx) {
+                if(grid[idx] !== "" || !active) return; grid[idx] = turn; btn.innerText = turn;
+                btn.style.color = (turn === "X") ? "#ff0055" : "cyan";
